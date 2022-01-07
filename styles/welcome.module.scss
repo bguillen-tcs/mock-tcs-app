@@ -1,0 +1,20 @@
+@import 'app.scss';
+
+$welcome-title-color: blue !default;
+$welcome-subtitle-color: green !default;
+
+.stage-welcome {
+  @include border(3px green dotted);
+}
+
+.title {
+  text-align: center;
+  @include textStyle(24px);
+  color: $welcome-title-color;
+}
+
+.stage-welcome {
+  .subtitle {
+    color: $welcome-subtitle-color;
+  }
+}

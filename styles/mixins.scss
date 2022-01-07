@@ -1,0 +1,23 @@
+@mixin textStyle ($font-size: $default-font-size, $font-color: $default-font-color) {
+  font-size: $font-size;
+  color: $font-size;
+}
+
+@mixin padding($values...) {
+  @each $var in $values {
+    padding: #{$var};
+  }
+}
+
+@mixin border($values...) {
+  @each $var in $values {
+    border: #{$var};
+  }
+}
+
+@mixin generatePrestageBrackgroundImage($image-url, $default-image-url, $stage-number, $stage-base-name, $mobile-image-url) {
+  .main-container-#{$stage-base-name}#{$stage-number} .stage-display .display-image,
+  .main-container-#{$stage-base-name}#{$stage-number} .stage-display .display-image:after {
+    content: url($image-url);
+  }
+}
